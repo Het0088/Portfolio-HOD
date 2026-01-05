@@ -1,0 +1,197 @@
+/* Online Certifications - Beautiful Cards with Company Logos */
+.certifications {
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.certifications::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    top: -250px;
+    right: -250px;
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(30px, 30px) rotate(10deg);
+    }
+}
+
+.certifications .section-title {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.cert-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.cert-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.cert-card:hover .cert-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cert-logo.coursera {
+    background: linear-gradient(135deg, #0056D2, #0073E6);
+}
+
+.cert-logo.nptel {
+    background: linear-gradient(135deg, #FF6B35, #FF8C42);
+}
+
+.cert-logo.ibm {
+    background: linear-gradient(135deg, #054ADA, #1F70C1);
+}
+
+.cert-logo.microsoft {
+    background: linear-gradient(135deg, #00A4EF, #0078D4);
+}
+
+.cert-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    min-height: 2.6em;
+}
+
+.cert-provider {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.cert-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #fbbf24;
+    font-size: 1.75rem;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.cert-card:hover .cert-badge {
+    opacity: 0.6;
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Co-Curricular Activities - Professional Table */
+.activities-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.activities-table thead {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    color: white;
+}
+
+.activities-table thead th {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.activities-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.3s;
+}
+
+.activities-table tbody tr:hover {
+    background: linear-gradient(90deg, #f8fafc, white);
+    transform: scale(1.01);
+}
+
+.activities-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.activities-table tbody td {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.activities-table tbody td:first-child {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.activities-table tbody td:first-child i {
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.activities-table tbody td:last-child {
+    color: var(--text-secondary);
+}

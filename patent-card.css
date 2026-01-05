@@ -1,0 +1,122 @@
+/* Single Patent Card - Centered & Beautiful */
+.patents {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 5rem 0;
+}
+
+.patents-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.patent-item {
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid #e5e7eb;
+    width: 100%;
+    text-align: center;
+}
+
+.patent-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
+    border-color: var(--primary-color);
+}
+
+.patent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.patent-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+.patent-status {
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.patent-status.pending {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+}
+
+.patent-status.granted {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+}
+
+.patent-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.patent-number {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.patent-year {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f1f5f9;
+    text-align: left;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .patents-grid {
+        padding: 0 1rem;
+    }
+
+    .patent-item {
+        padding: 2rem;
+    }
+
+    .patent-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+
+    .patent-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .patent-number {
+        font-size: 0.95rem;
+    }
+}

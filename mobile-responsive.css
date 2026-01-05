@@ -1,0 +1,438 @@
+/* COMPREHENSIVE MOBILE RESPONSIVE FIX */
+
+/* Force clear browser cache - increment version */
+/* Version 2.0 */
+
+/* === NAVBAR/HEADER - CENTER ON MOBILE === */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0.75rem 0 !important;
+    }
+
+    .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 1rem !important;
+    }
+
+    .nav-brand {
+        flex: 1 !important;
+    }
+
+    .nav-logo a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .logo-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .logo-text {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .logo-name {
+        font-size: 1rem !important;
+    }
+
+    .logo-title {
+        font-size: 0.75rem !important;
+    }
+
+    /* Mobile menu */
+    .nav-menu {
+        position: fixed !important;
+        left: 0 !important;
+        top: 70px !important;
+        width: 100% !important;
+        background: white !important;
+        flex-direction: column !important;
+        padding: 1rem !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease !important;
+    }
+
+    .nav-menu.active {
+        max-height: 500px !important;
+    }
+
+    .nav-menu li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .nav-link {
+        padding: 1rem !important;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+    }
+
+    .hamburger .bar {
+        width: 25px !important;
+        height: 3px !important;
+        background: var(--primary-color) !important;
+        border-radius: 2px !important;
+        transition: all 0.3s !important;
+    }
+}
+
+/* === ACADEMICS SECTION - MOBILE FIX === */
+@media screen and (max-width: 768px) {
+
+    /* Main academics container */
+    .academics {
+        padding: 3rem 1rem !important;
+    }
+
+    /* Force column layout */
+    .academics-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* Each subsection full width */
+    .academic-subsection {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Education and experience grids */
+    .education-grid,
+    .experience-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Cards styling */
+    .education-card,
+    .experience-card {
+        padding: 1.5rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Subsection titles */
+    .subsection-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* === CERTIFICATIONS - MOBILE === */
+@media screen and (max-width: 768px) {
+    .certifications {
+        padding: 3rem 1rem !important;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 0 !important;
+    }
+
+    .cert-card {
+        padding: 1.5rem !important;
+        margin: 0 !important;
+    }
+
+    .cert-logo {
+        width: 70px !important;
+        height: 70px !important;
+        font-size: 2rem !important;
+    }
+
+    .cert-card h3 {
+        font-size: 1rem !important;
+        min-height: auto !important;
+    }
+
+    .certifications::before {
+        width: 300px !important;
+        height: 300px !important;
+        top: -150px !important;
+        right: -150px !important;
+    }
+}
+
+/* === TABLES - MOBILE === */
+@media screen and (max-width: 768px) {
+
+    .activities-table,
+    .workshops-table,
+    .conferences-table {
+        font-size: 0.85rem !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+    }
+
+    .activities-table thead th,
+    .activities-table tbody td,
+    .workshops-table thead th,
+    .workshops-table tbody td,
+    .conferences-table thead th,
+    .conferences-table tbody td {
+        padding: 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* === VERY SMALL SCREENS === */
+@media screen and (max-width: 480px) {
+
+    /* Stack tables as cards */
+    .activities-table thead,
+    .workshops-table thead,
+    .conferences-table thead {
+        display: none !important;
+    }
+
+    .activities-table,
+    .activities-table tbody,
+    .activities-table tr,
+    .activities-table td,
+    .workshops-table,
+    .workshops-table tbody,
+    .workshops-table tr,
+    .workshops-table td,
+    .conferences-table,
+    .conferences-table tbody,
+    .conferences-table tr,
+    .conferences-table td {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .activities-table tr,
+    .workshops-table tr,
+    .conferences-table tr {
+        margin-bottom: 1rem !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        background: white !important;
+    }
+
+    .activities-table tbody td,
+    .workshops-table tbody td,
+    .conferences-table tbody td {
+        padding: 0.75rem 1rem !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        text-align: left !important;
+    }
+
+    .activities-table tbody td:last-child,
+    .workshops-table tbody td:last-child,
+    .conferences-table tbody td:last-child {
+        border-bottom: none !important;
+    }
+
+    .activities-table tbody td:first-child {
+        background: linear-gradient(135deg, #7c3aed, #8b5cf6) !important;
+        color: white !important;
+    }
+
+    .activities-table tbody td:first-child i {
+        color: white !important;
+        margin-right: 0.5rem !important;
+    }
+
+    .workshops-table tbody td:first-child,
+    .conferences-table tbody td:first-child {
+        font-weight: 700 !important;
+        background: #f8fafc !important;
+    }
+
+    /* Certification cards even smaller */
+    .cert-card {
+        padding: 1.25rem !important;
+    }
+
+    .cert-logo {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.75rem !important;
+    }
+}
+
+/* === HERO SECTION - MOBILE === */
+@media screen and (max-width: 768px) {
+
+    /* Remove all padding/margin that causes white space */
+    .hero {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .hero-background {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-container {
+        flex-direction: column !important;
+        padding: 2rem 1.5rem !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .hero-title {
+        font-size: 1.75rem !important;
+    }
+
+    .title-name {
+        font-size: 2.25rem !important;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        margin: 1.5rem 0 !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .hero-visual {
+        margin-top: 2rem !important;
+        width: 100% !important;
+    }
+}
+
+/* === FIX BODY/HTML OVERFLOW === */
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Fix any section causing white space */
+    section {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* === INDUSTRIAL TRAINING & OTHER SECTIONS - CENTER ON MOBILE === */
+@media screen and (max-width: 768px) {
+
+    /* Industrial Training - Center cards */
+    .training-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+    }
+
+    .training-card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Content Development - Center */
+    .content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+
+    .content-card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Professional Bodies - Center */
+    .professional-card {
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+
+    /* International Exposure - Center */
+    .international-card {
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Research Project - Center */
+    .research-card {
+        max-width: 500px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* === GENERAL SPACING FIXES === */
+@media screen and (max-width: 768px) {
+
+    /* Section padding */
+    section {
+        padding: 3rem 1rem !important;
+    }
+
+    /* Container width */
+    .container {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Remove any excessive margins */
+    .about-stats,
+    .skills-grid,
+    .research-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
